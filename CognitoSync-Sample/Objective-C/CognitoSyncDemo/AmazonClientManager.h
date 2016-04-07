@@ -48,6 +48,7 @@
 + (AmazonClientManager *)sharedInstance;
 
 - (void)FBLogin;
+- (void)TwitterLogin;
 
 @end
 

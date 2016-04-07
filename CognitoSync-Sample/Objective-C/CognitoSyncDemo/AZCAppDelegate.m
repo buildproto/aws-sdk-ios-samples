@@ -49,7 +49,8 @@
     }
 
 #if TWITTER_LOGIN
-    [Fabric with:@[TwitterKit]];
+    [[Twitter sharedInstance] startWithConsumerKey:@"AmrECv3hrta5sDlBec3q8DUKk" consumerSecret:@"G3aHovdMFzH1MpQK5CWynJ7lJ0GO54chu1LOTgwZtK4RCFXsrv"];
+    [Fabric with:@[[Twitter class]]];
 #endif
     
     [AWSLogger defaultLogger].logLevel = AWSLogLevelDebug;

@@ -62,6 +62,13 @@
     [[AmazonClientManager sharedInstance] FBLogin];
 }
 
+-(IBAction)loginWithTwitterClicked:(id)sender
+{
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    [self disableUI];
+    [[AmazonClientManager sharedInstance] TwitterLogin];
+}
+
 -(IBAction)logoutClicked:(id)sender {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [self disableUI];
@@ -76,6 +83,7 @@
 -(void)disableUI {
     self.browseDataButton.enabled = NO;
     self.loginButton.enabled = NO;
+    self.loginButtonTwitter.enabled = NO;
     self.logoutWipeButton.enabled = NO;
 }
 
@@ -83,11 +91,12 @@
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     self.browseDataButton.enabled = YES;
     self.loginButton.enabled = YES;
+    self.loginButtonTwitter.enabled = YES;
     if ([[AmazonClientManager sharedInstance] isLoggedIn]) {
         [self.loginButton setTitle:@"Link" forState:UIControlStateNormal];
     }
     else {
-        [self.loginButton setTitle:@"Login" forState:UIControlStateNormal];
+        [self.loginButton setTitle:@"Login with FB" forState:UIControlStateNormal];
     }
     self.logoutWipeButton.enabled = [[AmazonClientManager sharedInstance] isLoggedIn];
 }

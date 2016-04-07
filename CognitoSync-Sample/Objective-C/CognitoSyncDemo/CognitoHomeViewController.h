@@ -19,6 +19,7 @@
 
 @property IBOutlet UIButton *browseDataButton;
 @property IBOutlet UIButton *loginButton;
+@property IBOutlet UIButton *loginButtonTwitter;
 @property IBOutlet UIButton *logoutWipeButton;
 
 @end

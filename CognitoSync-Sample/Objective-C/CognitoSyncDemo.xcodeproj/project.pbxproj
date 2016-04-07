@@ -14,6 +14,10 @@
 		38C380CF1A09ABDD001886BE /* Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C380CC1A09ABDD001886BE /* Crypto.m */; };
 		38C380D01A09ABDD001886BE /* DeveloperAuthenticatedIdentityProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C380CE1A09ABDD001886BE /* DeveloperAuthenticatedIdentityProvider.m */; };
 		38CD1256196276F5001FC4E1 /* LoginWithAmazon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38CD1255196276F5001FC4E1 /* LoginWithAmazon.framework */; };
+		411553A41CB69C10004E57EE /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411553A01CB69C10004E57EE /* Fabric.framework */; };
+		411553A51CB69C10004E57EE /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411553A11CB69C10004E57EE /* TwitterKit.framework */; };
+		411553A61CB69C10004E57EE /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 411553A21CB69C10004E57EE /* TwitterKitResources.bundle */; };
+		411553A71CB69C10004E57EE /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411553A31CB69C10004E57EE /* TwitterCore.framework */; };
 		AFD73486E384F017F0F8AC51 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BFC43D39FEC93C454EBB8F /* libPods.a */; };
 		CE76800F1A7ACE9D005E3ACE /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = CE76800E1A7ACE9D005E3ACE /* Constants.m */; };
 		EFFA9179192FB8080059AE57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFFA9178192FB8080059AE57 /* Foundation.framework */; };
@@ -59,6 +63,10 @@
 		38C380CD1A09ABDD001886BE /* DeveloperAuthenticatedIdentityProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeveloperAuthenticatedIdentityProvider.h; sourceTree = "<group>"; };
 		38C380CE1A09ABDD001886BE /* DeveloperAuthenticatedIdentityProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeveloperAuthenticatedIdentityProvider.m; sourceTree = "<group>"; };
 		38CD1255196276F5001FC4E1 /* LoginWithAmazon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoginWithAmazon.framework; sourceTree = "<group>"; };
+		411553A01CB69C10004E57EE /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		411553A11CB69C10004E57EE /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		411553A21CB69C10004E57EE /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TwitterKitResources.bundle; sourceTree = "<group>"; };
+		411553A31CB69C10004E57EE /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 		69BFC43D39FEC93C454EBB8F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE76800E1A7ACE9D005E3ACE /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		EFFA9175192FB8080059AE57 /* CognitoSyncDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CognitoSyncDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +100,9 @@
 				EFFA9179192FB8080059AE57 /* Foundation.framework in Frameworks */,
 				38CD1256196276F5001FC4E1 /* LoginWithAmazon.framework in Frameworks */,
 				AFD73486E384F017F0F8AC51 /* libPods.a in Frameworks */,
+				411553A71CB69C10004E57EE /* TwitterCore.framework in Frameworks */,
+				411553A41CB69C10004E57EE /* Fabric.framework in Frameworks */,
+				411553A51CB69C10004E57EE /* TwitterKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +200,10 @@
 		EFFA917F192FB8080059AE57 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				411553A01CB69C10004E57EE /* Fabric.framework */,
+				411553A11CB69C10004E57EE /* TwitterKit.framework */,
+				411553A21CB69C10004E57EE /* TwitterKitResources.bundle */,
+				411553A31CB69C10004E57EE /* TwitterCore.framework */,
 				EFFA9180192FB8080059AE57 /* CognitoSyncDemo-Info.plist */,
 				EFFA9181192FB8080059AE57 /* InfoPlist.strings */,
 				EFFA9184192FB8080059AE57 /* main.m */,
@@ -228,6 +243,7 @@
 				EFFA9173192FB8080059AE57 /* Resources */,
 				20879EF7BF4D42B8B01AA6A3 /* Copy Pods Resources */,
 				1CAE07E6373D56D22B0BD143 /* Embed Pods Frameworks */,
+				4115539F1CB69A7A004E57EE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -263,7 +279,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = AZC;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Behroozi, David";
 				TargetAttributes = {
 					EFFA9198192FB8080059AE57 = {
@@ -295,6 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				411553A61CB69C10004E57EE /* TwitterKitResources.bundle in Resources */,
 				EFFA9194192FB8080059AE57 /* Images.xcassets in Resources */,
 				EFFA9183192FB8080059AE57 /* InfoPlist.strings in Resources */,
 				EFFA918C192FB8080059AE57 /* Main.storyboard in Resources */,
@@ -341,6 +358,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		4115539F1CB69A7A004E57EE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run d059f40b04496078b2df640140064b03576f4654 e2c9e6ef61866d58805d3ea0be3d702edcd2b2d17dda72f31f5c0178d1790852";
 		};
 		6A06151213EF401E83414C7D /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -441,6 +471,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -502,12 +533,14 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/CognitoSyncDemo",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CognitoSyncDemo/CognitoSyncDemo-Prefix.pch";
 				INFOPLIST_FILE = "CognitoSyncDemo/CognitoSyncDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amazon.aws.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -522,12 +555,14 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/CognitoSyncDemo",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CognitoSyncDemo/CognitoSyncDemo-Prefix.pch";
 				INFOPLIST_FILE = "CognitoSyncDemo/CognitoSyncDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amazon.aws.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -549,6 +584,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "CognitoSyncDemoTests/CognitoSyncDemoTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amazon.aws.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -567,6 +603,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CognitoSyncDemo/CognitoSyncDemo-Prefix.pch";
 				INFOPLIST_FILE = "CognitoSyncDemoTests/CognitoSyncDemoTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.amazon.aws.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

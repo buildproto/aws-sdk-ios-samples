@@ -90,7 +90,7 @@
 - (BOOL)isLoggedInWithTwitter {
     BOOL loggedIn = NO;
 #if TWITTER_LOGIN
-    loggedIn = [Twitter sharedInstance].session != nil;
+    loggedIn = [Twitter sharedInstance].sessionStore != nil;
 #endif
     return self.keychain[TWITTER_PROVIDER] != nil && loggedIn;
 }
@@ -98,7 +98,7 @@
 - (BOOL)isLoggedInWithDigits {
     BOOL loggedIn = NO;
 #if TWITTER_LOGIN
-    loggedIn = [Digits sharedInstance].session != nil;
+    //loggedIn = [Digits sharedInstance].session != nil;
 #endif
     return self.keychain[DIGITS_PROVIDER] != nil && loggedIn;
 }
@@ -161,9 +161,11 @@
     if ([self isLoggedInWithTwitter]) {
         [self TwitterLogout];
     }
+    /*
     if ([self isLoggedInWithDigits]) {
         [self DigitsLogout];
     }
+     */
 #endif
     [self.devAuthClient logout];
 
@@ -244,10 +246,10 @@
 #if TWITTER_LOGIN
     if (self.keychain[TWITTER_PROVIDER]) {
         [self TwitterLogin];
-    }
+    }/*
     if (self.keychain[DIGITS_PROVIDER]) {
         [self DigitsLogin];
-    }
+    }*/
 #endif
     if (self.credentialsProvider == nil) {
         [self completeLogin:nil];
@@ -335,9 +337,10 @@
     else if ([buttonTitle isEqualToString:TWITTER_PROVIDER]) {
         [self TwitterLogin];
     }
+    /*
     else if ([buttonTitle isEqualToString:DIGITS_PROVIDER]) {
         [self DigitsLogin];
-    }
+    }*/
 #endif
     else {
         [[AmazonClientManager errorAlert:@"Provider not implemented"] show];
@@ -491,17 +494,19 @@
 - (void)CompleteTwitterLogin
 {
     self.keychain[TWITTER_PROVIDER] = @"YES";
-    [self completeLogin:@{@"api.twitter.com":[self loginForTwitterSession:[Twitter sharedInstance].session]}];
+    [self completeLogin:@{@"api.twitter.com":[self loginForTwitterSession:[Twitter sharedInstance].sessionStore.session]}];
 }
 
 - (void)TwitterLogout
 {
-    [[Twitter sharedInstance] logOut];
+#warning FIXME
+//    [[Twitter sharedInstance] logOut];
     self.keychain[TWITTER_PROVIDER] = nil;
 }
-
+/*
 - (void)DigitsLogin
 {
+    
     [[Digits sharedInstance] authenticateWithCompletion:^
      (DGTSession* session, NSError *error) {
          if (session) {
@@ -522,7 +527,7 @@
     [[Digits sharedInstance] logOut];
     self.keychain[DIGITS_PROVIDER] = nil;
 }
-
+*/
 - (NSString *)loginForTwitterSession:(id<TWTRAuthSession>) session {
     return [NSString stringWithFormat:@"%@;%@", session.authToken, session.authTokenSecret];
 }
