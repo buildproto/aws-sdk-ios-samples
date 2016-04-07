@@ -21,8 +21,8 @@ struct Constants {
     
     // MARK: Required: Amazon Cognito Configuration
     
-    static let COGNITO_REGIONTYPE = AWSRegionType.Unknown // e.g. AWSRegionType.USEast1
-    static let COGNITO_IDENTITY_POOL_ID = "YourCognitoIdentityPoolId"
+    static let COGNITO_REGIONTYPE = AWSRegionType.USEast1
+    static let COGNITO_IDENTITY_POOL_ID = "us-east-1:5b17b326-45c7-4cef-b954-125dbab41dc4"
     
     // MARK: Optional: Enable Facebook Login
     

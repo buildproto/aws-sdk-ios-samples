@@ -16,9 +16,8 @@
 #import "Constants.h"
 
 #pragma mark - REQUIRED: Amazon Cognito Configuration
-#warning To run this sample correctly, you must set the following constants.
-AWSRegionType const CognitoRegionType = AWSRegionUnknown; // e.g. AWSRegionUSEast1
-NSString *const CognitoIdentityPoolId = @"YourCognitoIdentityPoolId";
+AWSRegionType const CognitoRegionType = AWSRegionUSEast1;
+NSString *const CognitoIdentityPoolId = @"us-east-1:5b17b326-45c7-4cef-b954-125dbab41dc4";
 
 #pragma mark - OPTIONAL: Enable FB Login
 /**
